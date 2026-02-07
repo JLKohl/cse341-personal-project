@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Summer Magic 2026",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-07",
+      "parkList": ["Magic Kingdom", "EPCOT", "Animal Kingdom"],
+      "hotel": "Disney's Contemporary Resort",
+      "budget": 5000,
+      "notes": "Book Lightning Lane passes early"
+    },
+    {
+      "name": "Spring Adventure 2026",
+      "startDate": "2026-04-10",
+      "endDate": "2026-04-15",
+      "parkList": ["Hollywood Studios", "EPCOT"],
+      "hotel": "Disney's Polynesian Village Resort",
+      "budget": 4200,
+      "notes": "Check parade times"
+    }
+  ]
+  

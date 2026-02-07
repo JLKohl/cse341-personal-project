@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Space Mountain",
+      "park": "Magic Kingdom",
+      "waitTime": 45,
+      "type": "ride"
+    },
+    {
+      "name": "Soarin' Around the World",
+      "park": "EPCOT",
+      "waitTime": 30,
+      "type": "ride"
+    },
+    {
+      "name": "Fantasmic!",
+      "park": "Hollywood Studios",
+      "waitTime": 20,
+      "type": "show"
+    },
+    {
+      "name": "Expedition Everest",
+      "park": "Animal Kingdom",
+      "waitTime": 50,
+      "type": "ride"
+    }
+  ]
+  
