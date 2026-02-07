@@ -29,13 +29,13 @@ const newTrip = async (req, res) => {
 
   const tripData = {
 
-    name: "string",        
-    startDate: "YYYY-MM-DD",
-    endDate: "YYYY-MM-DD",
-    parkList: ["string"],  
-    hotel: "string",
-    budget: 0,             
-    notes: "string"
+    name: req.body.name,
+    startDate: req.body.startDate,
+    endDate: req.body.endDate,
+    parkList: req.body.parkList, // array of parks
+    hotel: req.body.hotel,
+    budget: req.body.budget,
+    notes: req.body.notes
   }
 
   const response = await mongodb.getDb().db().collection('disney_planner').insertOne(tripData);

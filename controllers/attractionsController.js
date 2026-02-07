@@ -29,10 +29,10 @@ const newAttraction = async (req, res) => {
 
   const attactionData = {
 
-    name: "string",       
-    park: "string",      
-    waitTime: 0,          
-    type: "string" 
+    name: req.body.name,
+    park: req.body.park,
+    waitTime: req.body.waitTime,
+    type: req.body.type
   }
 
   const response = await mongodb.getDb().db().collection('attractions').insertOne(attactionData);
