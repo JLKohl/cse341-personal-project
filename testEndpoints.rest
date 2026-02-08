@@ -1,0 +1,45 @@
+# Get all trips
+GET http://localhost:8080/trips
+Accept: application/json
+
+###
+
+# Get all trips
+GET http://localhost:8080/attractions
+Accept: application/json
+
+###
+
+#insert trip
+POST http://localhost:8080/trips/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Summer Vacation 2026",
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-17",
+    "parkList": ["Epcot", "Animal Kingdom"],
+    "hotel": "Disney's Polynesian Village",
+    "budget": 5000,
+    "notes": "Book FastPasses in advance"
+}
+
+###
+
+#insert contact
+POST http://localhost:8080/attractions
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Slinky Dog Dash",
+    "park": "Hollywood Studios",
+    "waitTime": 50,
+    "type": "Family Ride"
+}
+
+
+
+
+
