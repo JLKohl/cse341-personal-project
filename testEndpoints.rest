@@ -4,8 +4,20 @@ Accept: application/json
 
 ###
 
-# Get all trips
+#Get trip by id
+GET http://localhost:8080/trips/6987c1dae7337a2f7ebf35b0
+Accept: application/json
+
+###
+
+# Get all attractions
 GET http://localhost:8080/attractions
+Accept: application/json
+
+###
+
+#Get attractions by id
+GET http://localhost:8080/attractions/6987c1c7e7337a2f7ebf35ab
 Accept: application/json
 
 ###
@@ -27,7 +39,7 @@ Accept: application/json
 
 ###
 
-#insert contact
+#insert attraction
 POST http://localhost:8080/attractions
 Content-Type: application/json
 Accept: application/json
@@ -39,6 +51,47 @@ Accept: application/json
     "type": "Family Ride"
 }
 
+###
+
+#edit trip
+PUT http://localhost:8080/trips/
+Content-Type: application/json
+Accept: application/json
+
+{
+
+    "budget": 5000
+    
+}
+
+###
+
+#edit attraction
+PUT http://localhost:8080/attractions/6987f24595d191717375eed3
+Content-Type: application/json
+Accept: application/json
+
+{
+
+    "waitTime": 0
+    
+}
+
+###
+
+#delete trip
+DELETE http://localhost:8080/trips/698a979860a557c685998364
+
+Accept: application/json
+
+
+
+###
+
+#delete attraction
+DELETE http://localhost:8080/attractions/698a979860a557c685998364
+
+Accept: application/json
 
 
 
