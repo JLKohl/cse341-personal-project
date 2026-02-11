@@ -1,5 +1,6 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
+const validate = require('../validations/attractionsValidation')
 
 
 const getAllAttractions = async (req, res, next) => {
@@ -26,7 +27,11 @@ const getAttractionById = async (req, res) => {
 };
 
 const newAttraction = async (req, res) => {
-  console.log(req.body);
+
+  const errors = validate.validateAttraction(req.body);
+  if(errors.length > 0){
+    return res.status(400).json({errors});
+  }
   
   const attractionData = {
 
@@ -53,6 +58,11 @@ const editAttraction = async (req, res) => {
 
   const attractionId = req.params.id;
   const updates = req.body;
+
+  const errors = validate.validateAttraction(updates, {partial: true});
+  if (errors.length > 0) {
+    return res.status(400).json({errors})
+  }
 
   const response = await mongodb.getDb().db().collection('attractions').updateOne({ _id: new ObjectId(attractionId) },
   { $set: updates });

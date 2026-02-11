@@ -13,6 +13,7 @@ function isValidDate(dateString) {
 function validateTrip (trip){
 
     const errors = [];
+    const partial = options.partial || false;
 
     //Required if not partial 
 
