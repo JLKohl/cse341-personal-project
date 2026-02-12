@@ -65,7 +65,7 @@ const editTrip = async (req, res) => {
     const tripId = req.params.id;
     const updates = req.body;
 
-    const errors = validate.validateTrip(updates, { partial: true });
+    const errors = validate.validateTrip(req.body);
     if (errors.length > 0) {
       return res.status(400).json({ errors });
     }

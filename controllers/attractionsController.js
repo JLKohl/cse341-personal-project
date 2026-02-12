@@ -51,30 +51,36 @@ const newAttraction = async (req, res) => {
 }
 
 const editAttraction = async (req, res) => {
+  try {
 
-  console.log('EDIT attraction HIT');
-  console.log('ID:', req.params.id);
-  console.log('BODY:', req.body);
+    const attractionId = req.params.id;
 
-  const attractionId = req.params.id;
-  const updates = req.body;
+    const errors = validate.validateAttraction(req.body);
+    if (errors.length > 0) {
+      return res.status(400).json({ errors });
+    }
 
-  const errors = validate.validateAttraction(updates, {partial: true});
-  if (errors.length > 0) {
-    return res.status(400).json({errors})
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('attractions')
+      .updateOne(
+        { _id: new ObjectId(attractionId) },
+        { $set: req.body }
+      );
+
+    if (response.matchedCount === 0) {
+      return res.status(404).json({ message: 'Attraction not found' });
+    }
+
+    return res.status(204).send();
+
+  } catch (err) {
+    console.error('EDIT ATTRACTION ERROR:', err);
+    return res.status(500).json({ error: err.message });
   }
+};
 
-  const response = await mongodb.getDb().db().collection('attractions').updateOne({ _id: new ObjectId(attractionId) },
-  { $set: updates });
-
-  if (response.matchedCount === 0) {
-    res.status(404).json({ message: 'Attraction not found' });
-  } else {
-    res.status(204).send();
-  }
-
-  res.status(200).json(response.value);
-}
 
 const deleteAttraction = async (req, res) => {
   

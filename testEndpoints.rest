@@ -40,12 +40,12 @@ Accept: application/json
 ###
 
 #insert attraction
-POST http://localhost:8080/attractions
+POST http://localhost:8080/attractions/698beb3f25f6b37b00ee719f
 Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "Rise",
+    "name": "Rise of the resistance",
     "park": "Hollywood studios",
     "waitTime": 50,
     "type": "Dark Ride"
@@ -67,14 +67,15 @@ Accept: application/json
 ###
 
 #edit attraction
-PUT http://localhost:8080/attractions/987c1c7e7337a2f7ebf35ab
+PUT http://localhost:8080/attractions/698beb3f25f6b37b00ee719f
 Content-Type: application/json
 Accept: application/json
 
 {
-
-    "waitTime": 70
-    
+    "name": "Rise of the Resistance",
+    "park": "Hollywood studios",
+    "waitTime": 50,
+    "type": "Dark Ride"
 }
 
 ###
