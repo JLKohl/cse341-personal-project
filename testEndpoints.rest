@@ -23,7 +23,7 @@ Accept: application/json
 ###
 
 #insert trip
-POST http://localhost:8080/trips/
+POST http://localhost:8080/trips/6987e04a3bc2d5003f386df7
 Content-Type: application/json
 Accept: application/json
 
@@ -32,9 +32,9 @@ Accept: application/json
     "startDate": "11/21/2027",
     "endDate": "10/21/2027",
     "parkList": ["Magic Kingdome", "Hollwood Studios"],
-    "hotel": "",
+    "hotel": "Polly",
     "budget": 0,
-    "notes": ""
+    "notes": "This will be an awesome trip"
 }
 
 ###
@@ -54,14 +54,18 @@ Accept: application/json
 ###
 
 #edit trip
-PUT http://localhost:8080/trips/6987c1dae7337a2f7ebf35b0
+PUT http://localhost:8080/trips/6987e04a3bc2d5003f386df7
 Content-Type: application/json
 Accept: application/json
 
 {
-
-    "budget": 1000
-    
+    "name": "super awesome trip",
+    "startDate": "11/21/2027",
+    "endDate": "10/21/2027",
+    "parkList": ["Magic Kingdome", "Hollwood Studios"], 
+    "hotel": "Polly",
+    "budget": 0,
+    "notes": "This will be an awesome trip"   
 }
 
 ###
