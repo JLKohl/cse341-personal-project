@@ -5,10 +5,10 @@
     "description": "API for planning Disney trips",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-personal-project-m6ip.onrender.com/api-docs",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
