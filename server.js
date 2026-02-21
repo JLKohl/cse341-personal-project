@@ -16,9 +16,11 @@ const app = express();
 app.use(cors()); 
 app.use(express.json());
 
+
 app.get('/', (req, res) => {
-    res.send('Disney Travel Planner API running!');
-  });
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 
 app.use('/attractions', attractionsRoute);
 app.use('/trips', tripsRoute);
