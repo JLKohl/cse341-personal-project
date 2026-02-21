@@ -83,7 +83,7 @@ const validateTrips = [
     .withMessage('Notes must be a string')
 ]
 
-const handelValidationErrors = (res, req, next) => {
+const handleValidationErrors = (res, req, next) => {
     const errors = validateResult(req);
     if(!errors.isEmpty()){
         return res.status(400).json({ errors: errors.array() });
@@ -92,4 +92,4 @@ const handelValidationErrors = (res, req, next) => {
     next();
 }
 
-module.exports ={validateAttraction, validateTrips, handelValidationErrors}
+module.exports ={validateAttraction, validateTrips, handleValidationErrors}

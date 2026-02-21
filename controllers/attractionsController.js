@@ -1,6 +1,5 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
-const validate = require('../middleware/attractionsValidation')
 
 
 const getAllAttractions = async (req, res, next) => {

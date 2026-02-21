@@ -1,15 +1,25 @@
 const express = require('express');
-const attractionsController = require('../controllers/attractionsController');
+const {validateAttraction, handleValidationErrors} = require('../middleware/validation')
 const router = express.Router();
 
+//get routes
 router.get('/', attractionsController.getAllAttractions);
 
 router.get('/:id', attractionsController.getAttractionById);
 
-router.post('/', attractionsController.newAttraction);
+//add new attraction
+router.post('/', 
+    validateAttraction,
+    handleValidationErrors,
+    attractionsController.newAttraction);
 
-router.put('/:id', attractionsController.editAttraction);
+//edit attraction
+router.put('/:id',
+    validateAttraction,
+    handleValidationErrors,
+    attractionsController.editAttraction);
 
+//delete attraction
 router.delete('/:id', attractionsController.deleteAttraction);
 
 module.exports = router;

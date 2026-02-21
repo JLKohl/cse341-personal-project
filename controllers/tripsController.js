@@ -1,5 +1,4 @@
 const mongodb = require('../db/connect');
-const validate = require('../validations/tripsValidation');
 const ObjectId = require('mongodb').ObjectId;
 
 
