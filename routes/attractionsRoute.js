@@ -1,7 +1,7 @@
 const express = require('express');
 const attractionsController = require('../controllers/attractionsController')
 const {validateAttraction, handleValidationErrors} = require('../middleware/validation')
-const { ensureAuthenticated } = require('./middleware/authMiddleware');
+const { ensureAuthenticated } = require('../middleware/authMiddleware');
 const router = express.Router();
 
 

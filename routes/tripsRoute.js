@@ -1,7 +1,7 @@
 const express = require('express');
 const {validateTrips, handleValidationErrors} = require('../middleware/validation')
 const tripsController = require('../controllers/tripsController');
-const { ensureAuthenticated } = require('./middleware/authMiddleware');
+const { ensureAuthenticated } = require('../middleware/authMiddleware');
 const router = express.Router();
 
 //get route
