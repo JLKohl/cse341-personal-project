@@ -36,8 +36,8 @@
                 "type": "object",
                 "properties": {
                   "name": { "type": "string", "example": "Super Awesome Trip" },
-                  "startDate": { "type": "string", "example": "11/21/2027" },
-                  "endDate": { "type": "string", "example": "11/25/2027" },
+                  "startDate": { "type": "string", "format": "date", "example": "11/21/2027" },
+                  "endDate": { "type": "string", "format": "date", "example": "11/25/2027" },
                   "parkList": { 
                     "type": "array", 
                     "items": { "type": "string" }, 
@@ -54,7 +54,7 @@
         },
         "responses": {
           "201": { "description": "Trip created" },
-          "400": { "description": "Bad Request (validation failed)" },
+          "400": { "description": "Validation failed (Bad Request)" },
           "500": { "description": "Server error" }
         }
       }
@@ -100,8 +100,8 @@
                 "type": "object",
                 "properties": {
                   "name": { "type": "string", "example": "Super Awesome Trip" },
-                  "startDate": { "type": "string", "example": "11/21/2027" },
-                  "endDate": { "type": "string", "example": "11/25/2027" },
+                  "startDate": { "type": "string", "format": "date", "example": "11/21/2027" },
+                  "endDate": { "type": "string", "format": "date", "example": "11/25/2027" },
                   "parkList": { 
                     "type": "array", 
                     "items": { "type": "string" }, 
@@ -118,7 +118,7 @@
         },
         "responses": {
           "204": { "description": "Trip updated successfully (No Content)" },
-          "400": { "description": "Bad Request (validation failed)" },
+          "400": { "description": "Validation failed (Bad Request)" },
           "404": { "description": "Trip not found" },
           "500": { "description": "Server error" }
         }
@@ -174,7 +174,7 @@
         },
         "responses": {
           "201": { "description": "Attraction created" },
-          "400": { "description": "Bad Request (validation failed)" },
+          "400": { "description": "Validation failed (Bad Request)" },
           "500": { "description": "Server error" }
         }
       }
@@ -231,7 +231,7 @@
         },
         "responses": {
           "204": { "description": "Attraction updated successfully (No Content)" },
-          "400": { "description": "Bad Request (validation failed)" },
+          "400": { "description": "Validation failed (Bad Request)" },
           "404": { "description": "Attraction not found" },
           "500": { "description": "Server error" }
         }
