@@ -11,6 +11,8 @@ const passport = require('passport');
 const attractionsRoute = require('./routes/attractionsRoute');
 const tripsRoute = require('./routes/tripsRoute');
 const flash = require('connect-flash');
+const path = require('path');
+
 
 const port = process.env.PORT || 8080;
 const app = express();
@@ -31,9 +33,11 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + '/public/index.ejs');
 });
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use('/attractions', attractionsRoute);
 app.use('/trips', tripsRoute);

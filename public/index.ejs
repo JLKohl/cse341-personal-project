@@ -9,6 +9,10 @@
 <body>
     <h1>Welcome To The Disney Trip Planner</h1>
 
+    <% if (errorMessage.length > 0) { %>
+        <p style="color:red;"><%= errorMessage[0] %></p>
+    <% } %>
+
     <div>
         <p>Please log in with your Google account</p>
     </div>
