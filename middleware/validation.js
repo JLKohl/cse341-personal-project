@@ -1,5 +1,5 @@
-//calling exspress validator 
-const {body} = require('express-validator');
+//calling express validator
+const { body, validationResult } = require('express-validator');
 
 //validation for attractions
 
@@ -82,3 +82,14 @@ const validateTrips = [
     .isString()
     .withMessage('Notes must be a string')
 ]
+
+const handelValidationErrors = (res, req, next) => {
+    const errors = validateResult(req);
+    if(!errors.isEmpty()){
+        return res.status(400).json({ errors: errors.array() });
+    }
+
+    next();
+}
+
+module.exports ={validateAttraction, validateTrips, handelValidationErrors}
