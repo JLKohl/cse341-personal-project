@@ -20,6 +20,7 @@ const { ensureAuthenticated } = require('./middleware/authMiddleware');
 
 const port = process.env.PORT || 8080;
 const app = express();
+app.set('trust proxy', 1);
 
 // --- Middleware ---
 app.use(cors());
