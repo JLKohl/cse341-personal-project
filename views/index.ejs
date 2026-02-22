@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disney Travel Planner</title>
-    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Welcome To The Disney Trip Planner</h1>
+    <div class="container">
+        <h1 class="disney-text">Welcome To The Disney Trip Planner</h1>
 
-    <% if (errorMessage.length > 0) { %>
-        <p style="color:red;"><%= errorMessage[0] %></p>
-    <% } %>
-
-    <div>
-        <p>Please log in with your Google account</p>
+        <% if (errorMessage.length > 0) { %>
+            <p class="error"><%= errorMessage[0] %></p>
+        <% } %>
+    
+        <div>
+            <p>Please log in with your Google account</p>
+        </div>
+        <button onclick="location.href='/auth/google'">Google Log in</button>
     </div>
-    <button onclick="location.href='/auth/google'">Google Log in</button>
+
 </body>
 
 </html>

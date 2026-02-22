@@ -1,0 +1,197 @@
+/* --- Starry Night Background --- */
+
+/* --- Body / Background --- */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at bottom, #0b1d3a 0%, #000000 100%);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+  }
+  
+  /* --- Group 1 --- */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    z-index: 0;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      /* stars randomly spread across top, middle, bottom */
+      50px 80px white,
+      200px 400px #f8c6d0,
+      300px 700px #d8b3ff,
+      400px 200px white,
+      500px 600px #f8c6d0,
+      600px 800px #d8b3ff,
+      700px 150px white,
+      800px 500px #f8c6d0,
+      900px 900px #d8b3ff,
+      1000px 300px white,
+      250px 50px #f8c6d0,
+      350px 120px #d8b3ff,
+      450px 80px white,
+      625px 180px #f8c6d0,
+      650px 90px #d8b3ff,
+      550px 200px white,
+      820px 250px #f8c6d0;
+    filter: blur(0.5px);
+    animation: twinkle1 3s linear infinite;
+  }
+  
+  /* --- Group 2 --- */
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    z-index: 0;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    box-shadow:
+      150px 50px #d8b3ff,
+      250px 300px white,
+      350px 650px #f8c6d0,
+      450px 180px #d8b3ff,
+      550px 700px white,
+      650px 400px #f8c6d0,
+      750px 850px #d8b3ff,
+      850px 500px white,
+      950px 950px #f8c6d0,
+      1050px 600px #d8b3ff,
+      300px 350px #f8c6d0,
+      500px 450px #d8b3ff,
+      700px 550px white,
+      850px 650px #f8c6d0,
+      950px 750px #d8b3ff,
+      700px 320px #d8b3ff,
+      890px 280px white;
+    filter: blur(0.5px);
+    animation: twinkle2 6s linear infinite;
+  }
+  
+  /* --- Group 3 --- */
+  body .stars-bottom {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    z-index: 0;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    box-shadow:
+      100px 900px white,
+      200px 150px #f8c6d0,
+      300px 500px #d8b3ff,
+      400px 300px white,
+      500px 800px #f8c6d0,
+      600px 200px #d8b3ff,
+      700px 600px white,
+      800px 700px #f8c6d0,
+      900px 100px #d8b3ff,
+      1000px 400px white,
+      150px 750px #f8c6d0,
+      350px 850px #d8b3ff,
+      550px 950px white,
+      750px 880px #f8c6d0,
+      950px 920px #d8b3ff,
+      730px 280px #f8c6d0,
+      800px 250px #d8b3ff,
+      875px 200px white;
+    filter: blur(0.5px);
+    animation: twinkle3 4.5s linear infinite;
+  }
+  
+  /* --- Animations --- */
+  @keyframes twinkle1 {
+    0%, 100% { opacity: 0.8; }
+    60% { opacity: 0.3; }
+  }
+  
+  @keyframes twinkle2 {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.2; }
+  }
+  
+  @keyframes twinkle3 {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.4; }
+  }
+  
+  /* --- Container & Layout --- */
+  .container {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+  }
+  
+  /* --- Waltograph Font --- */
+  @font-face {
+    font-family: 'Waltograph';
+    src: url('/fonts/waltograph.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Apply Waltograph to heading */
+  .disney-text {
+    font-family: 'Waltograph', cursive;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* --- Paragraphs & Text --- */
+  p {
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  /* Error message */
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* --- Button --- */
+  button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4285F4; /* Google blue */
+    color: white;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #3367D6;
+  }
+
+
+
+
+
