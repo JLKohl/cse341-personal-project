@@ -60,7 +60,9 @@ app.use('/trips', tripsRoute);
 app.use('/api-docs',
   ensureAuthenticated,
   swaggerUi.serve,
-  swaggerUi.setup(swaggerDocument)
+  swaggerUi.setup(swaggerDocument, {
+    customJs: '/swagger-custom.js'
+  })
 );
 
 // --- Start server after DB is connected ---

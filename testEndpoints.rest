@@ -1,24 +1,28 @@
 # Get all trips
 GET http://localhost:8080/trips
 Accept: application/json
+x-dev-bypass: true
 
 ###
 
 #Get trip by id
 GET http://localhost:8080/trips/6987d57c0be5bd4c96544d0e
 Accept: application/json
+x-dev-bypass: true
 
 ###
 
 # Get all attractions
 GET http://localhost:8080/attractions
 Accept: application/json
+x-dev-bypass: true
 
 ###
 
 #Get attractions by id
 GET http://localhost:8080/attractions/6987c1c7e7337a2f7ebf35ad
 Accept: application/json
+x-dev-bypass: true
 
 ###
 
@@ -26,6 +30,7 @@ Accept: application/json
 POST http://localhost:8080/trips/
 Content-Type: application/json
 Accept: application/json
+x-dev-bypass: true
 
 {
     "name": "Winter Trip",
@@ -43,20 +48,22 @@ Accept: application/json
 POST http://localhost:8080/attractions/
 Content-Type: application/json
 Accept: application/json
+x-dev-bypass: true
 
 {
-    "name": "Moana Water Experiance",
+    "name": "new ride",
     "park": "EPCOT",
-    "waitTime": 5,
-    "rideType": "Walk through experiance"
+    "waitTime": 50,
+    "rideType": "new ride"
 }
 
 ###
 
 #edit trip
-PUT http://localhost:8080/trips/6987f26c95d191717375eed4
+PUT http://localhost:8080/trips/69a3028e14698b15c2890706
 Content-Type: application/json
 Accept: application/json
+x-dev-bypass: true
 
 {
     "name": "Spring Break",
@@ -71,9 +78,10 @@ Accept: application/json
 ###
 
 #edit attraction
-PUT http://localhost:8080/attractions/69a2eddce060a96d0bfb0522
+PUT http://localhost:8080/attractions/69a302de14698b15c2890707
 Content-Type: application/json
 Accept: application/json
+x-dev-bypass: true
 
 {
     "name": "Moana Water Experiance",
@@ -85,18 +93,18 @@ Accept: application/json
 ###
 
 #delete trip
-DELETE http://localhost:8080/trips/6987f26c95d191717375eed4
-
+DELETE http://localhost:8080/trips/69a3028e14698b15c2890706
 Accept: application/json
+x-dev-bypass: true
 
 
 
 ###
 
 #delete attraction
-DELETE http://localhost:8080/attractions/69a2eb2ee17d086a4600023d
-
+DELETE http://localhost:8080/attractions/69a302de14698b15c2890707
 Accept: application/json
+x-dev-bypass: true
 
 
 

@@ -1,7 +1,7 @@
 function ensureAuthenticated(req, res, next) {
-    if(process.env.NODE_ENV === 'development'){
+    if (process.env.NODE_ENV === 'development' && req.headers['x-dev-bypass']) {
         return next();
-    }
+      }
     if(req.isAuthenticated()){
         return next();
     }
